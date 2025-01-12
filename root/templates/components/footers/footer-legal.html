@@ -1,7 +1,7 @@
 {% load static %}
 {% load i18n %}
 <footer>
-    <a href="" class="home d-flex justify-center align-center">
+    <a href="{% url 'home' %}" class="home d-flex justify-center align-center">
         <div class="icon">
             {% if page == 'home' %}
             <img src="{% static 'svgs/home.svg' %}" height="100%"/>

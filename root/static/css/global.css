@@ -48,6 +48,11 @@ p {
     padding: 0;
 }
 
+a {
+    color: #5BADFF;
+    text-decoration: none;
+}
+
 .logo {
     grid-area: logo;
     display: grid;
@@ -89,6 +94,10 @@ footer .disclaimer {
     grid-area: disclaimer;
 }
 
+.d-block {
+    display: block;
+}
+
 .d-flex {
     display: flex;
 }
@@ -99,6 +108,10 @@ footer .disclaimer {
 
 .align-center {
     align-items: center;
+}
+
+.w-100 {
+    width: 100%;
 }
 
 .text-red {
@@ -117,8 +130,16 @@ footer .disclaimer {
     color: #004CBC;
 }
 
+.filter-gray {
+    filter: invert(82%) sepia(10%) saturate(18%) hue-rotate(339deg) brightness(91%) contrast(87%)
+}
+
 .text-gray {
     color: #898989
+}
+
+.bg-light-gray {
+    background-color: #BABABA;
 }
 
 .text-bold {
@@ -131,6 +152,10 @@ footer .disclaimer {
 
 .mt-2 {
     margin-top: 8px;
+}
+
+.mt-4 {
+    margin-top: 16px
 }
 
 .ml-3 {
@@ -163,6 +188,47 @@ footer .disclaimer {
 
 .card h2 {
     font-size: 1rem;
+}
+
+.gridify-icon-input {
+    display: grid;
+    grid-template-columns: 40px 1fr;
+    grid-column-gap: 5px;
+    grid-template-areas:
+        "icon input";
+}
+
+.icon-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-area: icon;
+}
+
+.input-container {
+    display: flex;
+    width: 100%;
+    grid-area: input;
+}
+
+button {
+    padding: 10px;
+    width: 100%;
+    border-radius: 5px;
+    border: none;
+    color: white;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+input {
+    background-color: #F5F5F5;
+    border: none;
+    height: 24px;
+    padding: 8px;
+    border-radius: 5px;
+    margin: 10px 0;
+    width: 100%;
 }
 
 @media screen and (min-width: 430px) {
