@@ -355,6 +355,14 @@
                         {% endblocktrans %}
                     </p>
                 </div>
+                {% if request.user.is_authenticated %}
+                    {% if not request.user.legaluser.terms %}
+                        <form method="post">
+                            {% csrf_token %}
+                            <button type="submit" class="bg-light-gray">{% translate "Zustimmen" %}</button>
+                        </form>
+                    {% endif %}
+                {% endif %}
             </div>
         </main>
         {% include 'components/footers/footer-legal.html' with page="terms" %}
